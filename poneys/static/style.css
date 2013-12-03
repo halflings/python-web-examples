@@ -1,0 +1,28 @@
+body {
+	font-family: "Ubuntu", Arial, sans-serif;
+	background: url('static/bg.jp') #CEDBEA;
+}
+
+#container {
+	background: #FFF;
+	padding: 10px;
+	width: 900px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	margin: 0 auto;
+}
+
+.name {
+	font-weight: bold;
+	color: #3399FF;
+}
+
+.users-list {
+	list-style: none;
+}
+
+.users-list li {
+	background: #ECF4FB;
+	padding: 4px;
+	margin: 8px 0;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}

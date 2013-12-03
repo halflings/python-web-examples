@@ -1,0 +1,34 @@
+<html>
+
+	<head>
+		<title> Hello ! </title>
+		    <!-- Main js code -->
+	    <script src="static/main.js"></script>
+
+	    <!-- CSS Stylesheet -->
+	    <link rel="stylesheet" href="static/style.css">
+
+	</head>
+
+	<body>
+		<div id="container">
+			<ul class="users-list">
+				{% for user in users %}
+				<li>
+
+					{{user['_id']}} - <span class="name">{{user['name']}}</span> : {{user['country']}}
+
+				</li>
+				{% endfor %}
+			</ul>
+
+			<form action="/users" method="POST">
+				<input name="id" placeholder="Id" type="text" />
+				<input name="name" placeholder="Nom" type="text" />
+				<input name="country" placeholder="Pays" type="text" />
+				<input type="submit" />
+			</form>
+		</div>
+	</body>
+
+</html>
