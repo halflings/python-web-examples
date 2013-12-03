@@ -12,6 +12,10 @@
 
 	<body>
 		<div id="container">
+
+			<!-- On peut inclure d'autres templates dans un template -->
+			{% include "header.html" %}
+
 			<ul class="users-list">
 				{% for user in users %}
 				<li>
@@ -28,6 +32,8 @@
 				<input name="country" placeholder="Pays" type="text" />
 				<input type="submit" />
 			</form>
+
+			
 		</div>
 	</body>
 

@@ -37,10 +37,9 @@ def add_user():
 	try:
 		u_id, username, country = request.form['id'], request.form['name'], request.form['country']
 		db.users.insert({'_id': u_id, 'name': username, 'country': country})
-	
 		return index()
 	except Exception as e:
-		return "Error !"
+		return json.dumps({"error": True})
 
 def init_db():
 	db.drop_collection('users')
